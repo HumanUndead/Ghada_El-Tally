@@ -1,17 +1,15 @@
 import React from 'react'
 import TrendingCard from '@src/commonsections/TrendingCard';
 import LookBookCard from '@src/commonsections/LookBookCard';
-import SellerCard from '@src/commonsections/SellerCard';
-import LatestBlogs from '@src/commonsections/LatestBlogs';
 import FollowInstagram from '@src/commonsections/FollowInstagram';
 import Shipping from '@src/commonsections/Shipping';
-import FooterPage from '@src/components/Footer';
 import HomeSection from '@app/main-index/HomeSection';
 import CatSection from '@app/main-index/CatSection';
 import TopBanner from '@src/components/Headers/TopBanner';
-import Header from '@src/components/Headers/Header';
 import PopupPage from '@src/components/Popup';
 import HeadTitle from '@src/commonsections/HeadTitle';
+import MainBanner from '@src/commonsections/MainBanner';
+import ServiceBar from '@src/components/ServiceBar';
 
 const IndexPage = () => {
 
@@ -23,12 +21,17 @@ const IndexPage = () => {
             <TopBanner />
 
             {/* header */}
-            <Header />
+            {/* <Header /> */}
 
             <div>
 
                 {/* main slide */}
                 <HomeSection />
+
+                <ServiceBar />
+
+                {/* main banner */}
+                <MainBanner />
 
                 {/* cat-section */}
                 <CatSection />
@@ -40,10 +43,10 @@ const IndexPage = () => {
                 <LookBookCard />
 
                 {/* best seller */}
-                <SellerCard />
+                {/* <SellerCard /> */}
 
                 {/* latest - blog */}
-                <LatestBlogs />
+                {/* <LatestBlogs /> */}
 
                 {/* instagram */}
                 <FollowInstagram />
@@ -52,7 +55,7 @@ const IndexPage = () => {
                 <Shipping />
 
                 {/* Footer */}
-                <FooterPage />
+                {/* <FooterPage /> */}
 
                 <PopupPage />
 

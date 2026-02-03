@@ -305,322 +305,46 @@ const Header = () => {
                             </svg>
                         </Link>
 
-                        <Link className="navbar-brand" href="/index" as="image">
+                        <Link className="navbar-brand" href="/">
                             <Image src={logo} alt="LogoImg" width="95" priority />
                         </Link>
 
                         <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                            <div className="d-none d-lg-block mx-auto">
-                                <ul className="navbar-nav mx-auto mb-2 mb-lg-0">
-                                    <li className="nav-item dropdown dropdown-mega-xxl">
-                                        <span className={`nav-link ${show === 1 ? "show" : ""}`}  data-bs-toggle="dropdown" aria-expanded="false" onClick={() => handleClick(1)}>
-                                            Demo
-                                        </span>
-                                        <div className={`dropdown-menu ${show === 1 ? "show" : ""}`}>
-                                            <Row>
-                                                <Col lg={3}>
-                                                    <div className="dropdown-sub-column-item">
-                                                        <Link href='#' className="dropdown-menu-title">Home Pages</Link>
-                                                        <ul className="sub-column-menu">
-                                                            {
-                                                                HomePage1.map((item: any, index: number) => {
-                                                                    return (
-                                                                        <li key={index}><Link className="text-muted position-relative d-inline-flex" href={item.link}> {item.label} <span className={item.badgeColor}>{item.badge}</span></Link>
-                                                                        </li>
-                                                                    )
-                                                                })
-                                                            }
-                                                        </ul>
-                                                    </div>
-                                                </Col>
-                                                <Col lg={3}>
-                                                    <div className="dropdown-sub-column-item">
-                                                        <Link href="/home-default" className="dropdown-menu-title">Home
-                                                            Pages</Link>
-                                                        <ul className="sub-column-menu">
-                                                            {
-                                                                HomePage2.map((item: any, index: number) => {
-                                                                    return (
-                                                                        <li key={index}><Link className="text-muted position-relative d-inline-flex" href={item.link}> {item.label} <span className={item.badgeColor}>{item.badge}</span></Link>
-                                                                        </li>
-                                                                    )
-                                                                })
-                                                            }
-                                                        </ul>
-                                                    </div>
-                                                </Col>
-                                                <Col lg={3}>
-                                                    <div className="dropdown-sub-column-item">
-                                                        <Link href="/home-default" className="dropdown-menu-title">Header
-                                                            Layouts</Link>
-                                                        <ul className="sub-column-menu">
-                                                            {
-                                                                HeaderLayout.map((item: any, index: number) => {
-                                                                    return (
-                                                                        <li key={index}><Link className="text-muted position-relative d-inline-flex" href={item.link}> {item.label} <span className={item.badgeColor}>{item.badge}</span></Link>
-                                                                        </li>
-                                                                    )
-                                                                })
-                                                            }
-                                                        </ul>
-                                                    </div>
-                                                </Col>
-                                                <Col lg={3}>
-                                                    <div className="dropdown-sub-column-item">
-                                                        <Link href="#!" className="dropdown-menu-title">FEATURES</Link>
-                                                        <ul className="sub-column-menu">
-                                                            {
-                                                                Features.map((item: any, index: any) => {
-                                                                    return (
-                                                                        <li key={index}><Link className="text-muted position-relative d-inline-flex" href={item.link}> {item.label} <span className={item.badgeColor} style={item.badgeStyle}>{item.badge}</span></Link>
-                                                                        </li>
-                                                                    )
-                                                                })
-                                                            }
-                                                        </ul>
-                                                    </div>
-                                                </Col>
-                                            </Row>
-                                        </div>
-                                    </li>
-                                    <li className="nav-item dropdown dropdown-mega-xxl">
-                                        <span className={`nav-link position-relative ${show === 2 ? "show" : ""}`} data-bs-toggle="dropdown" aria-expanded="false" onClick={() => handleClick(2)}>
-                                            Shop <span className="badge bg-teal fw-normal">New</span>
-                                        </span>
-                                        <div className={`dropdown-menu p-3 ${show === 2 ? "show" : ""}`}>
-                                            <Row className="g-0">
-                                                <Col lg={5}>
-                                                    <Row className="g-0">
-                                                        <Col lg={6}>
-                                                            <div className="dropdown-sub-column-item">
-                                                                <Link href="/shop-filter-sidebar" className="dropdown-menu-title">SHOP PAGES</Link>
-                                                                <ul className="sub-column-menu">
-                                                                    {
-                                                                        ShopPage.map((item: any, index: number) => {
-                                                                            return (
-                                                                                <li key={index}>
-                                                                                    <Link className="text-muted" href={item.link}>{item.label}</Link>
-                                                                                </li>
-                                                                            )
-                                                                        })
-                                                                    }
-                                                                </ul>
-                                                            </div>
-                                                        </Col>
-                                                        <Col lg={6}>
-                                                            <div className="dropdown-sub-column-item">
-                                                                <Link href="/shop-filter-sidebar" className="dropdown-menu-title">FEATURES</Link>
-                                                                <ul className="sub-column-menu">
-                                                                    {
-                                                                        ShopFeatures.map((item: any, index: number) => {
-                                                                            return (
-                                                                                <li key={index}><Link className="text-muted position-relative d-inline-flex" href={item.link}>{item.label}
-                                                                                    <span className={item.badgeColor}>{item.badge}</span></Link></li>
-                                                                            )
-                                                                        })
-                                                                    }
-                                                                </ul>
-                                                            </div>
-                                                        </Col>
-                                                    </Row>
-                                                </Col>
-                                                <Col lg={7}>
-                                                    <Row className="p-4">
-                                                        {
-                                                            ShopImage.map((item: any, index: number) => {
-                                                                return (
-                                                                    <Col lg={6} className="cat-section p-0" key={index}>
-                                                                        <Link href={item.link} className="d-block position-relative cat_grid_item overflow-hidden " style={{ height: "350px" }}>
-                                                                            <div className="h-100 w-100 cat-grid-img" style={{ backgroundImage: `url(${item.img.src})` }}></div>
-                                                                            <div className="cat-grid-button text-body">
-                                                                                <div className="cat_grid_item__title">{item.label}</div>
-                                                                            </div>
-                                                                        </Link>
-                                                                    </Col>
-                                                                )
-                                                            })
-                                                        }
-                                                    </Row>
-                                                </Col>
-                                            </Row>
-                                        </div>
-                                    </li>
-
-                                    <li className="nav-item dropdown dropdown-mega-xxl">
-                                        <span className={`nav-link ${show === 3 ? "show" : ""}`}  data-bs-toggle="dropdown" aria-expanded="false" onClick={() => handleClick(3)}>
-                                            Product
-                                        </span>
-                                        <div className={`dropdown-menu ${show === 3 ? "show" : ""}`}>
-                                            <Row className="me-4">
-                                                <Col lg={3}>
-                                                    <div className="dropdown-sub-column-item">
-                                                        <Link href="/product-detail-layout-01" className="dropdown-menu-title">PRODUCT LAYOUT</Link>
-                                                        <ul className="sub-column-menu">
-                                                            {
-                                                                ProductLayout.map((item: any, index: number) => {
-                                                                    return (
-                                                                        <li key={index}><Link className="text-muted position-relative d-inline-flex" href={item.link}>
-                                                                            {item.label}<span className={item.badgeColor}>{item.badge}</span></Link>
-                                                                        </li>
-                                                                    )
-                                                                })
-                                                            }
-                                                        </ul>
-                                                    </div>
-                                                </Col>
-                                                <Col lg={3}>
-                                                    <div className="dropdown-sub-column-item">
-                                                        <Link href="/product-detail-layout-01" className="dropdown-menu-title">PRODUCT DETAIL</Link>
-                                                        <ul className="sub-column-menu">
-                                                            {
-                                                                ProductDetail.map((item: any, index: number) => {
-                                                                    return (
-                                                                        <li key={index}>
-                                                                            <Link className="text-muted position-relative d-inline-flex" href={item.link}>{item.label}
-                                                                                <span className={item.badgeColor}>{item.badge}</span>
-                                                                            </Link>
-                                                                        </li>
-
-                                                                    )
-                                                                })
-                                                            }
-                                                        </ul>
-                                                    </div>
-                                                </Col>
-                                                <Col lg={3}>
-                                                    <div className="dropdown-sub-column-item">
-                                                        <Link href="/product-detail-layout-01" className="dropdown-menu-title">PRODUCT SWATCH</Link>
-                                                        <ul className="sub-column-menu">
-                                                            {
-                                                                ProductSwatch.map((item: any, index: number) => {
-                                                                    return (
-                                                                        <li key={index}>
-                                                                            <Link className="text-muted" href={item.link}>{item.label}</Link>
-                                                                        </li>
-                                                                    )
-                                                                })
-                                                            }
-                                                        </ul>
-                                                    </div>
-                                                </Col>
-                                                <Col lg={3}>
-                                                    <div className="dropdown-sub-column-item">
-                                                        <Link href="/product-detail-layout-01" className="dropdown-menu-title">PRODUCT FEATURES</Link>
-                                                        <ul className="sub-column-menu">
-                                                            {
-                                                                ProductFeatures.map((item: any, index: number) => {
-                                                                    return (
-                                                                        <li key={index}>
-                                                                            <Link className="text-muted position-relative d-inline-flex" href={item.link} style={item.badgeStyle}>{item.lable}<span className={item.badgeColor}>{item.badge}</span></Link>
-                                                                        </li>
-                                                                    )
-                                                                })
-                                                            }
-                                                        </ul>
-                                                    </div>
-                                                </Col>
-                                            </Row>
-                                        </div>
-                                    </li>
-
-                                    <li className="nav-item dropdown dropdown-mega-3xl">
-                                        <span className={`nav-link position-relative text-danger ${show === 4 ? 'show' : ""}`}  data-bs-toggle="dropdown" aria-expanded="false" onClick={() => handleClick(4)}>
-                                            Sale <span className="badge bg-warning fw-normal">Sale</span>
-                                        </span>
-                                        <div className={`dropdown-menu ${show === 4 ? "show" : ""}`}>
-                                            <Row>
-                                                <Col lg={2}>
-                                                    <div className="dropdown-sub-column-item">
-                                                        {sale.map((item: any, index: number) => {
-                                                            return (
-                                                                <Link key={index} href={item.link} className="dropdown-menu-title">{item.lable}</Link>
-                                                            )
-                                                        })}
-                                                    </div>
-                                                </Col>
-                                                <Col lg={10}>
-                                                    <Swiper
-                                                        slidesPerView={1}
-                                                        spaceBetween={30}
-                                                        navigation={{
-                                                            nextEl: ".swiper-button-next",
-                                                            prevEl: ".swiper-button-prev",
-                                                        }}
-                                                        breakpoints={{
-                                                            640: {
-                                                                slidesPerView: 2,
-                                                            },
-                                                            768: {
-                                                                slidesPerView: 3,
-                                                            },
-                                                            1024: {
-                                                                slidesPerView: 4,
-                                                            },
-                                                        }}
-                                                        modules={[Navigation]}
-                                                        className='mySwiper'>
-                                                        <div className='swiper-wrapper'>
-                                                            {salesSwiper.map((product: any) => (
-                                                                <SwiperSlide key={product.id}>
-                                                                    <HeaderCard product={product} />
-                                                                </SwiperSlide>
-                                                            ))}
-                                                        </div>
-                                                        <div className="swiper-button-next"></div>
-                                                        <div className="swiper-button-prev"></div>
-                                                    </Swiper>
-                                                </Col>
-                                            </Row>
-                                        </div>
-                                    </li>
-
-
-                                    <li className="nav-item dropdown dropdown-mega-lg">
-                                        <span className={`nav-link ${show === 5 ? "show" : ""}`} role="button" data-bs-toggle="dropdown" aria-expanded="false" onClick={() => handleClick(5)}>
-                                            Portfolio
-                                        </span>
-                                        <ul className={`dropdown-menu dropdown-sub-column ${show === 5 ? "show" : ""}`}>
-                                            {
-                                                Portfolio.map((item: any, index: number) => {
-                                                    return (
-                                                        <li key={index}><Link className="text-muted" href={item.link}>{item.label}</Link></li>
-                                                    )
-                                                })
-                                            }
-                                        </ul>
-                                    </li>
-
-                                    <li className="nav-item dropdown dropdown-mega-lg">
-                                        <Link className={`nav-link ${show === 6 ? "show" : ""}`} href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" onClick={() => handleClick(6)}>
-                                            Lookbook
-                                        </Link>
-                                        <ul className={`dropdown-menu dropdown-sub-column ${show === 6 ? 'show' : ""}`}>
-                                            {Lookbook.map((item: any, index: number) => {
-                                                return (
-                                                    <li key={index}><Link className="text-muted" href={item.link}>{item.lable}</Link></li>
-                                                )
-                                            })}
-                                        </ul>
-                                    </li>
-                                    <li className="nav-item dropdown dropdown-mega-lg">
-                                        <span className={`nav-link ${show === 7 ? "show" : ""}`}  role="button" data-bs-toggle="dropdown" aria-expanded="false" onClick={() => handleClick(7)}>
-                                            Blog
-                                        </span>
-                                        <ul className={`dropdown-menu dropdown-sub-column ${show === 7 ? 'show' : ""}`}>
-                                            {Blog.map((item: any, index: any) => {
-                                                return (
-                                                    <li key={index}><Link className="text-muted" href={item.link}>{item.lable}</Link></li>
-                                                )
-                                            })}
-
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </div>
+                            <ul className="navbar-nav mx-auto mb-2 mb-lg-0 d-none d-lg-flex">
+                                <li className="nav-item">
+                                    <Link className="nav-link" href="/">
+                                        Home
+                                    </Link>
+                                </li>
+                                <li className="nav-item">
+                                    <Link className="nav-link" href="/shop">
+                                        Shop
+                                    </Link>
+                                </li>
+                                <li className="nav-item">
+                                    <Link className="nav-link" href="/contact-us">
+                                        Contact us
+                                    </Link>
+                                </li>
+                                <li className="nav-item">
+                                    <Link className="nav-link" href="/about-us">
+                                        About us
+                                    </Link>
+                                </li>
+                                {/* <li className="nav-item">
+                                    <Link className="nav-link" href="/profile">
+                                        Profile
+                                    </Link>
+                                </li> */}
+                            </ul>
                         </div>
                         <div className="topbar-toolbar d-flex align-items-center gap-3">
                             <Link data-bs-toggle="offcanvas" href="#searchOffcanvas" aria-controls="searchOffcanvas" onClick={handleShow}><i className="iccl iccl-search"></i></Link>
-                            <Link className="d-md-block d-none" data-bs-toggle="offcanvas" href="#accountOffcanvas" aria-controls="accountOffcanvas" onClick={handleLoginShow}><i className="iccl iccl-user"></i></Link>
+                            {/* <Link className="d-md-block d-none" data-bs-toggle="offcanvas" href="#accountOffcanvas" aria-controls="accountOffcanvas" onClick={handleLoginShow}><i className="iccl iccl-user"></i></Link>
+                             */}
+                             <Link href="/profile" className="text-muted">
+                                <i className="iccl iccl-user me-2"></i>
+                            </Link>
                             <Link className="d-md-block d-none" href="/wishlist"><i className="iccl iccl-heart"></i><span className="tcount bg-dark text-white rounded-circle d-flex align-items-center justify-content-center">3</span></Link>
                             <Link data-bs-toggle="offcanvas" href="#shoppingCartOffcanvas" aria-controls="shoppingCartOffcanvas" onClick={handleShoppingShow}><i className="iccl iccl-cart"></i><span className="tcount bg-dark text-white rounded-circle d-flex align-items-center justify-content-center">5</span></Link>
                         </div>

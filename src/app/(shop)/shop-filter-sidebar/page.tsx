@@ -3,9 +3,7 @@ import ShopNavbar from "@src/commonsections/ShopNavbar";
 import WomenColting from "@src/commonsections/WomenCloting";
 import FilterTab from "@app/(shop)/shop-filter-sidebar/FilterTab";
 import Link from "next/link";
-import FooterPage from "@src/components/Footer";
 import TopBanner from "@src/components/Headers/TopBanner";
-import Header from "@src/components/Headers/Header";
 import PopupPage from "@src/components/Popup";
 import HeadTitle from "@src/commonsections/HeadTitle";
 
@@ -14,9 +12,6 @@ const FilterSiderbar = () => {
         <React.Fragment>
             <HeadTitle title="Home Default"/>
             <TopBanner />
-
-            {/* header */}
-            <Header />
 
             <div>
                 <ShopNavbar />
@@ -32,7 +27,6 @@ const FilterSiderbar = () => {
                     </ul>
                 </div>
             </div>
-            <FooterPage />
 
             <PopupPage />
         </React.Fragment>
