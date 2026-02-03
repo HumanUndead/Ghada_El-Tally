@@ -28,7 +28,7 @@ const IndexPage = () => {
                 {/* main slide */}
                 <HomeSection />
 
-                <ServiceBar />
+                {/* <ServiceBar /> */}
 
                 {/* main banner */}
                 <MainBanner />

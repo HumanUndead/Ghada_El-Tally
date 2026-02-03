@@ -6,12 +6,12 @@ const MainBanner = () => {
     return (
         <section className="main-banner-section overflow-hidden w-100">
             <div
-                className="banner-wrapper w-100"
+                className="banner-wrapper w-100 mt-5"
                 style={{
                     backgroundImage: `url(${bannerImg.src})`,
                     backgroundSize: 'cover',
                     backgroundPosition: 'center',
-                    height: '700px',
+                    height: '400px',
                     width: '100%'
                 }}
             >
