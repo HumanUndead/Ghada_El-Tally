@@ -1,9 +1,11 @@
-
 import "@assets/scss/bootstrap.scss";
 import "@assets/scss/app.scss";
 import "@assets/icons/font-icon.css";
 import Head from "next/head";
 import { ReactNode } from "react";
+
+import Header from "@src/components/Headers/Header";
+import Footer from "@src/components/Footer";
 
 export function generateViewport(): Record<string, string | number> {
   return {
@@ -36,7 +38,13 @@ export default function Layout({ children }: LayoutProps) {
         </title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <body>{children}</body>
+      <body className="kalles-wrapper">
+        <Header /> 
+        
+        <main>{children}</main>
+        
+        <Footer />
+      </body>
     </html>
   );
 }

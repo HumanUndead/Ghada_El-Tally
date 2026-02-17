@@ -355,7 +355,7 @@ const HomeFashionTrendHeader = () => {
                             </svg>
                         </Link>
 
-                        <Link className="navbar-brand" href="/index">
+                        <Link className="navbar-brand" href="/">
                             <Image src={logo} alt="LogoImg" width="95" />
                         </Link>
 
@@ -685,7 +685,7 @@ const HomeFashionTrendHeader = () => {
                         </div>
                         <div className="topbar-toolbar d-flex align-items-center gap-3">
                             <Link data-bs-toggle="offcanvas" href="#searchOffcanvas" aria-controls="searchOffcanvas" onClick={handleShow}><i className="iccl iccl-search" style={{ transform: "rotate(90deg)" }}></i></Link>
-                            <Link className="d-md-block d-none" data-bs-toggle="offcanvas" href="#accountOffcanvas" aria-controls="accountOffcanvas" onClick={handleLoginShow}><i className="iccl iccl-user"></i></Link>
+                            <Link className="d-md-block d-none" data-bs-toggle="offcanvas" href="/profile" aria-controls="accountOffcanvas"><i className="iccl iccl-user"></i></Link>
                             <Link className="d-md-block d-none" href="/wishlist"><i className="iccl iccl-heart"></i><span className="tcount bg-dark text-white rounded-circle d-flex align-items-center justify-content-center">3</span></Link>
                             <Link data-bs-toggle="offcanvas" href="#shoppingCartOffcanvas" aria-controls="shoppingCartOffcanvas" onClick={handleShoppingShow}><i className="iccl iccl-cart"></i><span className="tcount bg-dark text-white rounded-circle d-flex align-items-center justify-content-center">5</span></Link>
                         </div>
@@ -695,7 +695,7 @@ const HomeFashionTrendHeader = () => {
 
             <div className="backdrop-shadow d-none"></div>
             <SearchModal show={searchShow} handleClose={handleClose} />
-            <LoginModal loginShow={loginShow} handleLoginClose={handleLoginClose} />
+            {/* <LoginModal loginShow={loginShow} handleLoginClose={handleLoginClose} /> */}
             <ShoppingCardModal shoppingShow={shoppingShow} handleShoppingClose={handleShoppingClose} />
 
 

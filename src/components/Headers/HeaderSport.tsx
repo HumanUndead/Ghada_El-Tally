@@ -205,7 +205,7 @@ const HeaderSport = () => {
                             </svg>
                         </Link>
 
-                        <Link className="navbar-brand" href="/index">
+                        <Link className="navbar-brand" href="/">
                             <Image src={logo} alt="LogoImg" width="95" />
                         </Link>
 

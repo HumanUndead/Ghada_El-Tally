@@ -2,12 +2,9 @@ import React from 'react'
 import { Container } from 'react-bootstrap'
 import shop from "@assets/images/shop/shop-banner.jpg"
 import Link from 'next/link'
-import Header from '@src/components/Headers/Header'
-import FooterPage from '@src/components/Footer'
 import PopupPage from '@src/components/Popup'
 import TopBanner from '@src/components/Headers/TopBanner'
 import Head from 'next/head'
-import MainModel from '@src/commonsections/MainModel'
 import FilterComponent from './Filter'
 
 const ShopGridListSwitcher = () => {
@@ -22,7 +19,6 @@ const ShopGridListSwitcher = () => {
             </Head>
 
             <TopBanner />
-            <Header />
             <div>
                 {/* main slide */}
                 <div style={{ backgroundImage: `url(${shop.src})`, backgroundPosition: "center" }} className="position-relative">
@@ -51,7 +47,6 @@ const ShopGridListSwitcher = () => {
                     </ul>
                 </div>
             </div>
-            <FooterPage />
             <PopupPage />
         </React.Fragment>
     )

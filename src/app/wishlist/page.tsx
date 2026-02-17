@@ -2,10 +2,7 @@ import React from "react";
 import WomenColting from "@src/commonsections/WomenCloting";
 import FilterTab from "./FilterTab";
 import ShopNavbar from "@src/commonsections/ShopNavbar";
-import FooterPage from "@src/components/Footer";
 import TopBanner from "@src/components/Headers/TopBanner";
-import Header from "@src/components/Headers/Header";
-import PopupPage from "@src/components/Popup";
 
 const Shop = () => {
     return (
@@ -13,7 +10,7 @@ const Shop = () => {
             <TopBanner />
 
             {/* header */}
-            <Header />
+            {/* <Header /> */}
 
             <ShopNavbar />
 
@@ -31,8 +28,8 @@ const Shop = () => {
                     <li><a href="#">Next</a></li>
                 </ul>
             </div>
-            <FooterPage />
-            <PopupPage />
+            {/* <FooterPage /> */}
+            {/* <PopupPage /> */}
         </React.Fragment>
     )
 }

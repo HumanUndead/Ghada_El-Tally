@@ -50,7 +50,7 @@ const LoginModal = ({ loginShow, handleLoginClose }: any) => {
                     </Form>
                     <p className="text-muted">
                         New customer?{' '}
-                        <Link href="#!" className="product-title">
+                        <Link href="/create-account" className="product-title" onClick={handleLoginClose}>
                             Create your account
                         </Link>
                     </p>
